@@ -76,15 +76,18 @@ export const style = /*css*/ `
     }
 
     .p-multiselect-label {
-        display: flex;
-        align-items: center;
-        gap: calc(dt('multiselect.padding.y') / 2);
         white-space: nowrap;
         cursor: pointer;
         overflow: hidden;
         text-overflow: ellipsis;
         padding: dt('multiselect.padding.y') dt('multiselect.padding.x');
         color: dt('multiselect.color');
+    }
+
+    .p-multiselect-display-chip .p-multiselect-label {
+        display: flex;
+        align-items: center;
+        gap: calc(dt('multiselect.padding.y') / 2);
     }
 
     .p-multiselect-label.p-placeholder {
@@ -104,10 +107,6 @@ export const style = /*css*/ `
         visibility: hidden;
     }
 
-    .p-multiselect .p-multiselect-overlay {
-        min-width: 100%;
-    }
-
     .p-multiselect-overlay {
         position: absolute;
         top: 0;
@@ -117,6 +116,7 @@ export const style = /*css*/ `
         border: 1px solid dt('multiselect.overlay.border.color');
         border-radius: dt('multiselect.overlay.border.radius');
         box-shadow: dt('multiselect.overlay.shadow');
+        min-width: 100%;
     }
 
     .p-multiselect-header {
