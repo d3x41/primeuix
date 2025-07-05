@@ -67,10 +67,6 @@ export const style = /*css*/ `
         outline-offset: dt('autocomplete.dropdown.focus.ring.offset');
     }
 
-    .p-autocomplete .p-autocomplete-overlay {
-        min-width: 100%;
-    }
-
     .p-autocomplete-overlay {
         position: absolute;
         top: 0;
@@ -80,6 +76,7 @@ export const style = /*css*/ `
         border: 1px solid dt('autocomplete.overlay.border.color');
         border-radius: dt('autocomplete.overlay.border.radius');
         box-shadow: dt('autocomplete.overlay.shadow');
+        min-width: 100%;
     }
 
     .p-autocomplete-list-container {
@@ -159,6 +156,12 @@ export const style = /*css*/ `
             box-shadow dt('autocomplete.transition.duration');
         outline-color: transparent;
         box-shadow: dt('autocomplete.shadow');
+    }
+
+    .p-autocomplete-input-multiple.p-disabled {
+        opacity: 1;
+        background: dt('inputtext.disabled.background');
+        color: dt('inputtext.disabled.color');
     }
 
     .p-autocomplete:not(.p-disabled):hover .p-autocomplete-input-multiple {
